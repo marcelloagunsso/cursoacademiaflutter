@@ -24,7 +24,13 @@ void main(List<String> args) {
 
       if(int.tryParse(pacienteSplit[1]) != null && int.parse(pacienteSplit[1]) > filtroIdade)
         qtdPacientesFiltroIdade++;
+  }
 
+  print("O total de pacientes com idade superior a 20 anos é ${qtdPacientesFiltroIdade}.");
+  print("");
+  for(var paciente in pacientes)
+  {
+      var pacienteSplit = paciente.split('|');
       var sobrenomePaciente = pacienteSplit[0].split(' ').last;
 
       if(!listaSobrenomes.contains(sobrenomePaciente))
@@ -44,5 +50,5 @@ void main(List<String> args) {
       }
   }
 
-  print("O total de pacientes com idade superior a 20 anos é ${qtdPacientesFiltroIdade}.");
+  
 }
