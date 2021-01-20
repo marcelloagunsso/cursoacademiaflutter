@@ -1,2 +1,2 @@
 # cursoacademiaflutter
-Curso - Academia do Flutterr
+Curso - Academia do Flutter
