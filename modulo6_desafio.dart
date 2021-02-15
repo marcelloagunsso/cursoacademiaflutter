@@ -18,17 +18,7 @@ void main()
     'Laura|29|Feminino',
   ];
 
-  // Baseado na lista acima.
-  // 1 - Remover os duplicados
-  // 
-  // 3 - Filtrar e deixar a lista somente com pessoas maiores de 18 anos e mostre a quantidade de pessoas com mais de 18 anos
-  // 4 - Encontre a pessoa mais velha.
-
-  Set<String> pessoasUnicas = Set();
-
-  pessoas.forEach((linha) {
-    pessoasUnicas.add(linha);
-  });
+  Set<String> pessoasUnicas = pessoas.toSet();
 
   print('1 - Remover os duplicados');
   print(pessoasUnicas);
@@ -38,7 +28,7 @@ void main()
   pessoasUnicas.forEach((element) { 
       pessoasLista.add(element.split('|'));
   });
-
+  
   print('2 - Me mostre a quantidade de pessoas do sexo Masculino e Feminino');
   informarQuandidadeSexo(pessoasLista);
   print('');
